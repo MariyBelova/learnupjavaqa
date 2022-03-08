@@ -46,6 +46,6 @@ public class Main {
         System.out.println("Скорости не выбывших игроков:");
         System.out.println(Arrays.toString(winners1));
     }
-    
+
 }
 
