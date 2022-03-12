@@ -22,21 +22,23 @@ public class Homework17 {
         }
         return losers;
     }
-
+    
     public static int[] winner(int[] speedOfPlayers) {
         int cnt = 0;
-        if (Main.isGreenLight== false) {
+        if (Main.isGreenLight == false) {
             for (int speed : speedOfPlayers) {
-                if (speed <= 0) {
+                if (speed == 0) {
                     cnt++;
-
                 }
             }
+        } else {
+            cnt = speedOfPlayers.length;
+
         }
         int[] winners = new int[cnt];
         int i = 0;
         for (int speedOfPlayer : speedOfPlayers) {
-            if (Main.isGreenLight == false && speedOfPlayer <= 0) {
+            if (Main.isGreenLight) {
                 winners[i] = speedOfPlayer;
                 i++;
             }
