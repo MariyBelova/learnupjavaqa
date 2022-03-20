@@ -41,6 +41,11 @@ public class Homework17 {
             if (Main.isGreenLight) {
                 winners[i] = speedOfPlayer;
                 i++;
+            } else {
+                if (Main.isGreenLight == false && speedOfPlayer == 0) {
+                    winners[i] = speedOfPlayer;
+                    i++;
+                }
             }
         }
         return winners;
